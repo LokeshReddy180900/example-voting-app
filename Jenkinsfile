@@ -2,6 +2,8 @@ pipeline {
     agent any
 
     environment {
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
         DOCKER_CREDENTIALS_ID = 'docker-cred'
         SONARQUBE_INSTALLATION_NAME = 'Sonarqube'
     }
@@ -15,14 +17,11 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('Sonarqube') {
+                withSonarQubeEnv("${SONARQUBE_INSTALLATION_NAME}") {
                     sh 'sonar-scanner'
                 }
             }
-
         }
-
-
 
         stage('Build Docker Images') {
             steps {
