@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS_ID = 'docker-cred'
-        SONARQUBE_CREDENTIALS_ID = 'sonarqube'
+        SONARQUBE_INSTALLATION_NAME = 'Sonarqube'
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('Sonarqube') {
                     sh 'sonar-scanner'
                 }
             }
