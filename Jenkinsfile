@@ -38,7 +38,6 @@ pipeline {
                 script {
                     docker.build('ambatilokesh/python-vote-app', './vote')
                     docker.build('ambatilokesh/nodejs-results-app', './result')
-                    sh 'docker buildx build --platform linux/amd64 -t ambatilokesh/dotnet-worker ./worker'
                 }
             }
         }
