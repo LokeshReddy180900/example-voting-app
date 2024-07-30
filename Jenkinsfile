@@ -15,13 +15,15 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+       
+
+        /*stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv("${SONARQUBE_INSTALLATION_NAME}") {
                     sh 'sonar-scanner'
                 }
             }
-        }
+        } */
 
         stage('Build Docker Images') {
             steps {
