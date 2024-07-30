@@ -5,7 +5,7 @@ pipeline {
         JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
         PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
         DOCKER_CREDENTIALS_ID = 'docker-cred'
-        SONARQUBE_INSTALLATION_NAME = 'Sonarqube'
+       // SONARQUBE_INSTALLATION_NAME = 'Sonarqube'
     }
 
     stages {
