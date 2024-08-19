@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: 038462755058.dkr.ecr.us-east-1.amazonaws.com/frontend:2
+      - image: 038462755058.dkr.ecr.us-east-1.amazonaws.com/frontend:3
         name: vote
         ports:
         - containerPort: 80
