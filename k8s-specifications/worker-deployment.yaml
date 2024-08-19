@@ -15,5 +15,5 @@ spec:
         app: worker
     spec:
       containers:
-      - image: 038462755058.dkr.ecr.us-east-1.amazonaws.com/backend:4
+      - image: 038462755058.dkr.ecr.us-east-1.amazonaws.com/backend:5
         name: worker
